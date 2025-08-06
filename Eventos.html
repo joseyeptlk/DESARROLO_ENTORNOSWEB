@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eventos - Language School</title>
+  <link rel="stylesheet" href="Eventos.css"/>
+  <style>
+    /* Extra estilos para galería */
+    .galeria {
+      background-color: #f5f5f5;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .galeria h2 {
+      margin-bottom: 20px;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .slider img {
+      height: 200px;
+      scroll-snap-align: center;
+      border-radius: 10px;
+    }
+
+    /* Sección eventos futuros */
+    .eventos-futuros {
+      background-color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .evento-lista {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .evento-item {
+      background-color: #1f3c88;
+      color: white;
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+      position: relative;
+    }
+
+    .evento-item .fecha {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #d72323;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Calendario */
+    .calendario {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .tabla-calendario {
+      margin: auto;
+      border-collapse: collapse;
+    }
+
+    .tabla-calendario th, .tabla-calendario td {
+      border: 1px solid #ccc;
+      width: 100px;
+      height: 80px;
+      text-align: center;
+      vertical-align: top;
+      position: relative;
+    }
+
+    .tabla-calendario td:hover {
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .evento-pop {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      right: 5px;
+      background: #1f3c88;
+      color: white;
+      padding: 5px;
+      font-size: 12px;
+      border-radius: 5px;
+      display: none;
+    }
+
+    .tabla-calendario td:hover .evento-pop {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="Logo.jpeg" alt="Language School Logo" />
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="Index.html">INICIO</a></li>
+        <li><a href="Nosotros.html">NOSOTROS</a></li>
+        <li><a href="Cultura.html">CULTURA</a></li>
+        <li><a href="Programas.html">PROGRAMAS</a></li>
+        <li><a href="eventos.html">EVENTOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- GALERÍA DE EVENTOS -->
+<section class="galeria">
+  <h2>GALERIA DE EVENTOS</h2>
+  <div class="slider-loop">
+    <div class="slide-track">
+      <!-- Primer grupo de imágenes -->
+      <img src="img1.jpg" alt="Evento 1" />
+      <img src="img2.jpg" alt="Evento 2" />
+      <img src="img3.jpg" alt="Evento 3" />
+      <img src="img4.jpg" alt="Evento 4" />
+      <img src="img5.jpg" alt="Evento 5" />
+      <img src="img6.jpg" alt="Evento 6" />
+
+      <!-- Duplicado para loop perfecto -->
+      <img src="img1.jpg" alt="Evento 1" />
+      <img src="img2.jpg" alt="Evento 2" />
+      <img src="img3.jpg" alt="Evento 3" />
+      <img src="img4.jpg" alt="Evento 4" />
+      <img src="img5.jpg" alt="Evento 5" />
+      <img src="img6.jpg" alt="Evento 6" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- EVENTOS FUTUROS -->
+  <section class="eventos-futuros">
+    <h2>Eventos Destacados</h2>
+    <div class="evento-lista">
+      <div class="evento-item">
+        <div class="fecha">01/07</div>
+        <h3>Viaje a Canadá</h3>
+        <p>Intercambio estudiantil con universidades bilingües.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">05/07</div>
+        <h3>Feria Intercultural</h3>
+        <p>Gastronomía, danzas y exposiciones de distintos países.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">08/07</div>
+        <h3>Festival del Idioma</h3>
+        <p>Actividades lúdicas, trivias y concursos en múltiples lenguas.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">12/07</div>
+        <h3>Charlas Internacionales</h3>
+        <p>Invitados de embajadas y organizaciones educativas.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">15/07</div>
+        <h3>Taller de Portugués</h3>
+        <p>Introducción al idioma y su cultura con profesores nativos.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">18/07</div>
+        <h3>Día del Aprendizaje</h3>
+        <p>Actividades para aprender jugando en distintos idiomas.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">20/07</div>
+        <h3>Cine Internacional</h3>
+        <p>Proyección de películas extranjeras con análisis cultural.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">23/07</div>
+        <h3>Competencia de Debates</h3>
+        <p>Participación por niveles en inglés, francés y alemán.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">25/07</div>
+        <h3>Curso Intensivo de Verano</h3>
+        <p>Clases aceleradas para mejorar habilidades lingüísticas.</p>
+      </div>
+      <div class="evento-item">
+        <div class="fecha">30/07</div>
+        <h3>Entrega de Certificados</h3>
+        <p>Ceremonia de reconocimiento a los alumnos destacados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDARIO DE EVENTOS -->
+  <section class="calendario">
+    <h2>Calendario de Julio 2025</h2>
+    <table class="tabla-calendario">
+      <tr>
+        <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom</th>
+      </tr>
+      <tr>
+        <td></td><td>1<div class="evento-pop">Inicio de clases de verano</div></td>
+        <td>2</td><td>3</td><td>4</td><td>5<div class="evento-pop">Feria intercultural</div></td><td>6</td>
+      </tr>
+      <tr>
+        <td>7</td><td>8<div class="evento-pop">Festival del idioma</div></td><td>9</td><td>10</td><td>11</td><td>12<div class="evento-pop">Charlas internacionales</div></td><td>13</td>
+      </tr>
+      <tr>
+        <td>14</td><td>15<div class="evento-pop">Taller de Portugués</div></td><td>16</td><td>17</td><td>18<div class="evento-pop">Día del aprendizaje</div></td><td>19</td><td>20</td>
+      </tr>
+      <tr>
+        <td>21</td><td>22</td><td>23<div class="evento-pop">Competencia de debates</div></td><td>24</td><td>25<div class="evento-pop">Curso de verano</div></td><td>26</td><td>27</td>
+      </tr>
+      <tr>
+        <td>28</td><td>29</td><td>30<div class="evento-pop">Entrega de certificados</div></td><td>31</td><td></td><td></td><td></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- GALERÍA DE VIDEOS -->
+    <section class="galeria">
+    <h2>Videos de Eventos</h2>
+    <div class="videos-container">
+        <iframe width="300" height="180" src="https://www.youtube.com/embed/cdnyNqJ15BM" frameborder="0" allowfullscreen></iframe>
+        <iframe width="300" height="180" src="https://www.youtube.com/embed/MJxvZBuiuzI" frameborder="0" allowfullscreen></iframe>
+        <iframe width="300" height="180" src="https://www.youtube.com/embed/FsNDpuNT5Zk" frameborder="0" allowfullscreen></iframe>
+    </div>
+    </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="contacto">
+      <p><strong>CONTACTOS</strong></p>
+      <p>Av. Pizarro de Junín 178 - La Victoria - Lima Perú</p>
+      <p>+51 999 999 999</p>
+      <p>contacto@csi.edu.pe</p>
+      <p>www.colegiosanignaciodeloyola.com</p>
+    </div>
+    <div class="redes">
+      <p><strong>SÍGUENOS</strong></p>
+      <p>Redes sociales del colegio</p>
+    </div>
+    <div class="importante">
+      <p><strong>IMPORTANTE</strong></p>
+      <ul>
+        <li>Calendario de eventos</li>
+        <li>Libro de reclamaciones</li>
+        <li>Autenticación de certificados</li>
+        <li>Política de privacidad</li>
+        <li>Transparencia</li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
